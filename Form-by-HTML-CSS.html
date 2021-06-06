@@ -1,0 +1,232 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster" />
+<html>
+  <style>
+    body {
+      font-family: Helvetica, sans-serif;
+      background-color: cornsilk;
+    }
+
+    .container {
+      padding: 30px;
+      background-color: white;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0px 5px 0px;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+      font-size: 18px;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    input[type="number"]:focus,
+    input[type="date"]:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      background: seashell;
+    }
+
+    input[type="number"] {
+      width: 5%;
+      padding: 15px;
+      margin: 5px 0px 5px 0px;
+      border: none;
+      background: #f1f1f1;
+      font-size: 18px;
+    }
+
+    input[type="date"] {
+      width: 20%;
+      padding: 15px;
+      margin: 5px 0px 5px 0px;
+      border: none;
+      background: #f1f1f1;
+      font-size: 18px;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      padding: 10px;
+    }
+
+    select {
+      width: 10%;
+      padding: 15px;
+      margin: 5px 0px 5px 0px;
+      background: #f1f1f1;
+      font-size: 18px;
+    }
+
+    hr {
+      border-style: solid;
+      background-color: #f1f1f1;
+      border-width: 1px;
+      margin-bottom: 25px;
+      margin-top: 25px;
+    }
+
+    label {
+      font-size: x-large;
+      font-family: monospace;
+    }
+
+    h1 {
+      font-family: Lobster;
+      text-align: center;
+      color: #04aa6d;
+    }
+
+    .register-button {
+      background-color: #04aa6d;
+      color: white;
+      width: 100%;
+      padding: 20px;
+      margin-top: 15px;
+      border: none;
+      cursor: pointer;
+      opacity: 0.9;
+    }
+
+    .register-button:hover {
+      opacity: 1;
+    }
+  </style>
+
+  <head>
+    <title>Registration Page</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="#">
+        <h1>Provide Your Information</h1>
+        <hr />
+
+        <label for="fName"><b>First Name</b></label>
+        <input
+          type="text"
+          id="fName"
+          name="first"
+          placeholder="firstname"
+          required
+        />
+        <br /><br />
+        <label for="lName"><b>Last Name</b></label>
+        <input
+          type="text"
+          id="lName"
+          name="last"
+          placeholder="lastname"
+          required
+        />
+        <br /><br />
+
+        <label for="dept"><b>Department : </b></label>
+        <select id="dept">
+          <option value="CSE">CSE</option>
+          <option value="EEE">EEE</option>
+          <option value="ECE">ECE</option>
+          <option value="ME">ME</option>
+          <option value="CE">CE</option>
+        </select>
+
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+        <label for="level"><b>Level : </b></label>
+        <input type="number" id="level" name="L" max="4" min="1" value="1" />
+        &emsp;&emsp;&emsp;
+        <label for="semester"><b>Semester : </b></label>
+        <input type="number" id="semester" name="S" max="2" min="1" value="1" />
+        <br /><br />
+
+        <label for="dob"><b>Date of Birth : </b></label>
+        <input
+          type="date"
+          name="birthday"
+          id="dob"
+          placeholder="dd-mm-yyyy"
+          required
+        />
+        <br /><br />
+
+        <label for="gender"><b>Gender : </b></label>
+        <input type="radio" id="male" name="gender" value="Male" required />
+        <label for="male">Male</label>
+        &emsp;&emsp;
+        <input type="radio" id="female" name="gender" value="Female" required />
+        <label for="female">Female</label>
+        &emsp;&emsp;
+        <input type="radio" id="other" name="gender" value="Other" required />
+        <label for="other">Other</label>
+        <br /><br />
+
+        <label for="skill"><b>Skill(s) : </b></label><br />&emsp;
+        <input type="checkbox" id="cricket" name="cricket" />&nbsp;
+        <label for="cricket">Cricket</label><br />&emsp;
+        <input type="checkbox" name="football" id="football" />&nbsp;
+        <label for="football">Football</label><br />&emsp;
+        <input type="checkbox" name="debate" id="debate" />&nbsp;
+        <label for="debate">Debate</label><br />&emsp;
+        <input type="checkbox" name="dance" id="dance" />&nbsp;
+        <label for="dance">Dance</label><br />&emsp;
+        <input type="checkbox" name="sing" id="sing" />&nbsp;
+        <label for="sing">Sing</label>
+        <br /><br />
+
+        <label for="phone"><b>Phone</b></label>
+        <input type="tel" name="tel" id="phone" value="+88" required />
+        <br /><br />
+
+        <label for="address"><b>Address</b></label>
+        <textarea
+          name="text"
+          id="address"
+          cols="20"
+          rows="5"
+          style="resize: none"
+          required
+        ></textarea>
+
+        <hr />
+
+        <label for="user"><b>Username</b></label>
+        <input
+          type="text"
+          id="user"
+          name="user"
+          placeholder="username"
+          required
+        />
+        <br /><br />
+        <label for="pass"><b>Password</b></label>
+        <input
+          type="password"
+          id="pass"
+          name="pwd"
+          placeholder="*****"
+          required
+        />
+        <br /><br />
+        <label for="mail"><b>Email</b></label>
+        <input
+          type="email"
+          id="mail"
+          name="email"
+          placeholder="example@gmail.com"
+          required
+        />
+        <button class="register-button">Register</button>
+      </form>
+    </div>
+  </body>
+</html>
